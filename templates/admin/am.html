@@ -32,20 +32,37 @@
             width: 60px;
             text-align: center;
         }
+
     </style>
-    <title>用户页面</title>
+    <title>申请管理页面</title>
 </head>
 <body>
 <div class="header">
     <div class="container" style="margin-left: 0;margin-top: 50px">
-        <h1>Welcome,user XXX!</h1>
+        <h1>Welcome,admin!</h1>
     </div>
 </div>
 <!--菜单栏-->
 <div class="menu">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">我的主页</a>
+            <a class="navbar-brand" href="#">快捷导航</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav nav-pills">
+                    <!--<a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>-->
+                    <a class="nav-link" href="#">用户管理</a>
+                    <a class="nav-link" href="#">物品管理</a>
+                    <a class="nav-link" href="#">库存管理</a>
+                    <a class="nav-link active" href="#">申请审批</a>
+                </div>
+                <div class="navbar-nav nav-pills ml-auto">
+                    <a class="nav-link" href="#">注销</a>
+                </div>
+            </div>
         </nav>
     </div>
 </div>
@@ -59,11 +76,12 @@
                 <thead>
                 <tr>
                     <th scope="col">#</th>
+                    <th scope="col">申请流水号</th>
+                    <th scope="col">用户ID</th>
                     <th scope="col">物品ID</th>
-                    <th scope="col">物品名称</th>
-                    <th scope="col">物品产地</th>
-                    <th scope="col">库存数量</th>
-                    <th scope="col">物品图片</th>
+                    <th scope="col">申请数量</th>
+                    <th scope="col">日期</th>
+                    <th scope="col">状态</th>
                     <th scope="col">选中</th>
                 </tr>
                 </thead>
@@ -75,10 +93,11 @@
                     <td>3</td>
                     <td>4</td>
                     <td>5</td>
+                    <td>6</td>
                     <td>
-                        <div class="custom-control custom-radio">
-                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio1"></label>
+                        <div class="form-check">
+                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
+                                   value="option1" aria-label="...">
                         </div>
                     </td>
                 </tr>
@@ -89,40 +108,20 @@
         <!--操作区-->
         <div class="col-sm-3 col-12" style="border:none;">
             <div class="container sticky-top" style="margin-top:10px;border: solid 3px lightblue;border-radius: 5px">
-                <!--输入框-->
-                <div class="row" style=" margin-top: 60px">
-                    <div class="col-12 input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Sizing example input"
-                               aria-describedby="inputGroup-sizing-default">
-                    </div>
-                    <div class="col-12 input-group mb-3" style="margin-top: 30px">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-                        </div>
-                        <input type="text" class="form-control" aria-label="Sizing example input"
-                               aria-describedby="inputGroup-sizing-default">
-                    </div>
-                </div>
                 <!--按钮-->
-                <div class="row" style="padding: 0; margin-top: 30px;margin-bottom: 50px">
+                <div class="row" style="padding: 0; margin-top: 30px">
                     <div class="col-12">
-                        <button type="button" class="btn btn-secondary btn-block">查询</button>
+                        <button type="button" class="btn btn-secondary btn-block">查看待批准</button>
                     </div>
                 </div>
-
-                <div class="col-12 input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
+                <div class="row" style="margin-top: 30px;margin-bottom: 50px">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-secondary btn-block" >批准
+                        </button>
                     </div>
-                    <input type="text" class="form-control" aria-label="Sizing example input"
-                           aria-describedby="inputGroup-sizing-default">
-                </div>
-                <div class="row" style="padding: 0; margin-top: 30px;margin-bottom: 50px">
-                    <div class="col-12">
-                        <button type="button" class="btn btn-secondary btn-block">申请</button>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-secondary btn-block" >驳回
+                        </button>
                     </div>
                 </div>
             </div>

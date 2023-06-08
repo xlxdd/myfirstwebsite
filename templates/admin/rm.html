@@ -34,7 +34,7 @@
         }
 
     </style>
-    <title>用户管理页面</title>
+    <title>库存查看页面</title>
 </head>
 <body>
 <div class="header">
@@ -54,9 +54,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav nav-pills">
                     <!--<a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>-->
-                    <a class="nav-link active" href="#">用户管理</a>
+                    <a class="nav-link" href="#">用户管理</a>
                     <a class="nav-link" href="#">物品管理</a>
-                    <a class="nav-link" href="#">库存管理</a>
+                    <a class="nav-link active" href="#">库存管理</a>
                     <a class="nav-link" href="#">申请审批</a>
                 </div>
                 <div class="navbar-nav nav-pills ml-auto">
@@ -76,18 +76,22 @@
                 <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">用户名</th>
-                    <th scope="col">密码</th>
-                    <th scope="col">权限</th>
+                    <th scope="col">流水号</th>
+                    <th scope="col">操作</th>
+                    <th scope="col">物品ID</th>
+                    <th scope="col">物品数量</th>
+                    <th scope="col">日期</th>
                     <th scope="col">选中</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
                     <td>
                         <div class="form-check">
                             <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
@@ -95,36 +99,6 @@
                         </div>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>
-                        <div class="form-check">
-                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
-                                   value="option1" aria-label="...">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    <td>
-                        <div class="form-check">
-                            <input class="form-check-input position-static" type="checkbox" id="blankCheckbox"
-                                   value="option1" aria-label="...">
-                        </div>
-                    </td>
-                </tr>
-                <script>
-                    let table = document.getElementById('my');
-                    for (let i = 0; i < 20; i++) {
-                        table.innerHTML += '<tr><th scope="row">3</th><td>Larry</td><td>the Bird</td><td>@twitter</td><td><div class="form-check"><input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."></div></td></tr>';
-                    }
-                </script>
                 </tbody>
             </table>
         </div>
